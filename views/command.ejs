@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4." />
+    <meta name="author" content="Creative Tim" />
+    <title>Ajouté un client</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="../../assets/vendor/nucleo/css/nucleo.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css" />
+    <!-- Page plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/quill/dist/quill.core.css">
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="../../assets/css/argon.css?v=1.1.0" type="text/css" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../../assets/css/mycss.css" type="text/css" />
+</head>
+
+<body>
+    <!-- Sidenav -->
+    <%- include('partials/sidebar') -%>
+    <!-- Main content -->
+    <div class="main-content" id="panel">
+        <!-- Topnav -->
+        <%- include('partials/navbar') -%>
+        <!-- Header -->
+        <!-- Header -->
+        <div class="header bg-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-6 col-7">
+                            <h6 class="h2 text-white d-inline-block mb-0">
+                                Ajoutez un client
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="container-fluid mt--6">
+            <div class="row">
+                <div class="col">
+                    <div class="card-wrapper">
+                        <!-- Custom form validation -->
+                        <div class="card">
+                            <!-- Card header -->
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <form action="/command" method="POST" class="needs-validation" novalidate>
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom01">Prénom</label>
+                                            <input type="text" name="firstName" class="form-control"
+                                                id="validationCustom01" placeholder="Hans-Derly" required />
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom02">Nom</label>
+                                            <input type="text" name="lastName" class="form-control"
+                                                id="validationCustom02" placeholder="Rameau" required />
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label"
+                                                for="validationCustomUsername">Nationalité</label>
+                                            <input type="text" name="nationality" class="form-control"
+                                                id="validationCustomUsername" placeholder="Haitienne"
+                                                aria-describedby="inputGroupPrepend" required />
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom03">Date de
+                                                Naissance</label>
+                                            <input id="validationCustom03" name="dateOfBirth"
+                                                class="form-control datepicker" placeholder="Select date" type="text"
+                                                value="06/20/2018" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid city.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom04">Lieu de
+                                                Naissance</label>
+                                            <input type="text" name="placeOfBirth" class="form-control"
+                                                id="validationCustom04" placeholder="State" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid
+                                                state.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom05">Telephone</label>
+                                            <input type="number" name="phone" class="form-control"
+                                                id="validationCustom05" placeholder="50944102233" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom03">N.
+                                                Passeport</label>
+                                            <input type="text" name="passportNumber" class="form-control"
+                                                id="validationCustom03" placeholder="PP6585478" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid city.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom04">NIF</label>
+                                            <input type="number" name="nif" class="form-control" id="validationCustom04"
+                                                placeholder="0028932178" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid
+                                                state.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom05">Numero
+                                                D'identification
+                                                Nationale</label>
+                                            <input type="number" name="nin" class="form-control"
+                                                id="validationCustom05 " placeholder="05-10-99-2000-10-00074"
+                                                required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom04">Statut</label>
+                                            <select name="statut" id="typePersonne" onchange="getPiecesRequise()"
+                                                class="form-control" data-toggle="select">
+                                                <option value=""></option>
+                                                <option value="Adulte">Adulte</option>
+                                                <option value="Mineur">Mineur</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom05">Passeport</label>
+                                            <select name="passportType" id="typePassport" onchange="getPiecesRequise()"
+                                                class="form-control" data-toggle="select">
+                                                <option value=""></option>
+                                                <option value="Nouveau">Nouveau</option>
+                                                <option value="Renouvellement">Renouvellement</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="exampleFormControlSelect3">Pièces
+                                                    requises</label>
+                                                <div id="pieceReq"></div>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom03">Prénom Personne
+                                                Ref</label>
+                                            <input type="text" name="firstNameRef" class="form-control"
+                                                id="validationCustom03" placeholder="Hans-Derly" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid city.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom04">Nom Personne
+                                                Ref</label>
+                                            <input type="text" name="lastNameRef" class="form-control"
+                                                id="validationCustom04" placeholder="Rameau" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid
+                                                state.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-control-label" for="validationCustom05">Téléphone
+                                                Personne Ref</label>
+                                            <input type="number" name="phoneRef" class="form-control"
+                                                id="validationCustom05 " placeholder="50944102233" required />
+                                            <div class="invalid-feedback">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary" type="submit">
+                                        Terminé
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Default browser form validation -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <%- include('partials/footer') -%>
+        </div>
+    </div>
+
+    <!-- Argon Scripts -->
+    <!-- Core -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="../../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <!-- Optional JS -->
+    <script src="../../assets/vendor/select2/dist/js/select2.min.js"></script>
+    <script src="../../assets/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="../../assets/vendor/quill/dist/quill.min.js"></script>
+    <script src="../../assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="../../assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <!-- Argon JS -->
+    <script src="../../assets/js/argon.js?v=1.1.0"></script>
+
+
+
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener(
+                'load',
+                function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName(
+                        'needs-validation'
+                    );
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(
+                        forms,
+                        function (form) {
+                            form.addEventListener(
+                                'submit',
+                                function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                },
+                                false
+                            );
+                        }
+                    );
+                },
+                false
+            );
+        })();
+    </script>
+
+    <script>
+        function getPiecesRequise() {
+            let typePersonne = document.getElementById('typePersonne').value;
+            let typePassport = document.getElementById('typePassport').value;
+            $('#pieceReq').html("");
+
+            if (typePersonne != "" && typePassport != "") {
+                $.post("/pieces-required", { typePersonne: typePersonne, typePassport: typePassport }, function (data) {
+                    let multiSelect = '<select name="pieceList" multiple class="form-control" id="exampleFormControlSelect2"><option>Selectionnez les pièces</option>';
+                    data.forEach(Pieces => {
+                        //alert(Pieces[0].piece);
+                        console.log(Pieces.piece);
+                        multiSelect += "<option value='" + Pieces.id_pieces + "'>" + Pieces.piece + "</option>";
+                    });
+                    multiSelect += "</select>";
+                    $('#pieceReq').html(multiSelect);
+                });
+
+            };
+        };
+    </script>
+
+    <!-- Argon JS -->
+    <script src="../../assets/js/argon.js?v=1.1.0"></script>
+</body>
+
+</html>

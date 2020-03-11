@@ -1,0 +1,60 @@
+<div class="form-row">
+  <div class="col-md-6">
+      <label class="form-control-label" for="validationCustom05">Type de
+          Passeport</label>
+      <div class="custom-control custom-radio mb-3">
+        <input onclick="myFunction()" name="custom-radio-1" class="custom-control-input" checked id="customRadio5" type="radio">
+        <label class="custom-control-label" for="customRadio5">Nouveau</label>
+      </div>
+      <div class="custom-control custom-radio mb-3">
+        <input name="custom-radio-1" class="custom-control-input" id="customRadio6" type="radio">
+        <label class="custom-control-label" for="customRadio6">Renouvellement</label>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3" id="nouveau" style="">
+      <div class="custom-control">
+          <select name="pieces" multiple data-placeholder="Ajoutez les pieces">
+              <option value="Extrait">Extrait</option>
+              <option value="Matricule">Matricule</option>
+              <option value="CIN">CIN</option>
+          </select>
+      </div>
+  </div>
+  <!-- <div class="col-md-4 mb-3">
+      <label class="form-control-label" for="validationCustom05">Type de
+          Passeport</label>
+      <div class="custom-control custom-checkbox mb-3">
+          <input name="type1" class="custom-control-input" id="customCheck1"
+              onclick="myFunction()" type="checkbox" />
+          <label class="custom-control-label" for="customCheck1">Nouveau</label>
+      </div>
+      <div class="custom-control custom-checkbox mb-3">
+          <input name="type2" class="custom-control-input" id="customCheck2"
+              onclick="myFunction2()" type="checkbox" />
+          <label class="custom-control-label"
+              for="customCheck2">Renouvellement</label>
+      </div>
+      <div class="invalid-feedback">
+          Please provide a valid zip.
+      </div>
+  </div>
+  <div class="col-md-4 mb-3" id="nouveau" style="display:none">
+      <div class="custom-control">
+          <select name="pieces" multiple data-placeholder="Ajoutez les pieces">
+              <option value="Extrait">Extrait</option>
+              <option value="Matricule">Matricule</option>
+              <option value="CIN">CIN</option>
+          </select>
+      </div>
+  </div>
+  <div class="col-md-4 mb-3" id="renouvellement" style="display:none">
+      <div class="custom-control">
+          <select name="pieces2" multiple data-placeholder="Ajoutez les pieces">
+              <option value="AncienPasseport">Ancien Passeport</option>
+              <option value="Matricule">Matricule</option>
+              <option value="CIN">CIN</option>
+          </select>
+      </div>
+  </div> -->
+
+</div>

@@ -31,11 +31,11 @@ module.exports = {
     // Find all new passport
     listNewPassport: async () => {
         let promise = new Promise((resolve, reject) => {
-            let sql = "SELECT COUNT(*) AS nb_passport FROM client WHERE client.passport_type = 'Nouveau'"
+            let sql = "SELECT COUNT(*) AS new_passport FROM client WHERE client.passport_type = 'Nouveau'"
             connection.query(sql, (err, result) => {
                 if (err) throw err;
                 console.log(result)
-                resolve(result[0].nb_passport);
+                resolve(result[0].new_passport);
             });
         });
         return await promise;
@@ -44,11 +44,11 @@ module.exports = {
     // Find all new passport
     listReNewPassport: async () => {
         let promise = new Promise((resolve, reject) => {
-            let sql = "SELECT COUNT(*) AS nb_passport FROM client WHERE client.passport_type = 'Renouvellement'"
+            let sql = "SELECT COUNT(*) AS renew_passport FROM client WHERE client.passport_type = 'Renouvellement'"
             connection.query(sql, (err, result) => {
                 if (err) throw err;
                 console.log(result)
-                resolve(result[0].nb_passport);
+                resolve(result[0].renew_passport);
             });
         });
         return await promise;

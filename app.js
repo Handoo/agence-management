@@ -39,7 +39,7 @@ app.get('/', async (req, res) => {
 });
 
 // Server start
-PORT = process.env.PORT;
-app.listen(PORT || 8080, () => {
+PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
     console.log(' Server started at port ' + PORT);
 });
